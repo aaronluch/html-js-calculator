@@ -22,7 +22,6 @@ function clearDisplay() {
     const display = document.getElementById('display');
     display.textContent = '0';
     resetSize();
-    console.log("reset size");
     updateDisplay();
 }
 
@@ -35,4 +34,39 @@ function calculateResult() {
         displayValue = "ERROR";
     }
     updateDisplay();
+}
+
+document.addEventListener('keydown', keyPress);
+
+function keyPress(event) {
+    const key = event.key;
+    switch (key) {
+        case '0':
+        case '1':
+        case '2':
+        case '3':
+        case '4':
+        case '5':
+        case '6':
+        case '7':
+        case '8':
+        case '9':
+        case '.':
+            appendDisplay(key);
+            break;
+        case '+':
+        case '-':
+        case '*':
+        case '/':
+            appendDisplay(key);
+            break;
+        case 'Enter':
+            calculateResult();
+            break;
+        case 'Escape':
+            clearDisplay();
+            break;
+        default:
+            break;
+    }
 }
