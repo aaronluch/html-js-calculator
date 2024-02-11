@@ -1,11 +1,14 @@
+/*
+Updates Calculator Display
+*/
 let displayValue = 0;
-
-// updates calculator's display
 function updateDisplay() {
     document.getElementById("display").textContent=displayValue;
 }
 
-// appends button pressed to display
+/*
+Appends buttom pressed to display
+*/
 function appendDisplay(value) {
     if (displayValue === "0") {
         displayValue = "" + value;
@@ -16,7 +19,9 @@ function appendDisplay(value) {
     updateDisplay();
 }
 
-// clears calculator's display
+/*
+Clears the display
+*/
 function clearDisplay() {
     displayValue = "0"; // defaults to a 0 when clearing
     const display = document.getElementById('display');
@@ -25,17 +30,26 @@ function clearDisplay() {
     updateDisplay();
 }
 
-// calculates result by evaluating value as a string
+/*
+Calculates result be evaluating input as a string
+Exception case being percentage calculation
+*/
 function calculateResult() {
     try {
-        displayValue = eval(displayValue.toString());
+        const calculate = displayValue.replace(/%/g, '/100');
+
+        displayValue = eval(calculate);
         updateDisplay();
     } catch(error) {
         displayValue = "ERROR";
+        updateDisplay();
     }
     updateDisplay();
 }
 
+/*
+Listener for key-press input
+*/
 document.addEventListener('keydown', keyPress);
 
 function keyPress(event) {

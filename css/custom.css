@@ -55,7 +55,19 @@ body::before {
     white-space: nowrap;
     color: rgb(255, 255, 255);
     margin-top: 80px;
-    overflow: hidden;
+    overflow:auto;
+}
+
+.display::-webkit-scrollbar-track {
+    background: #171717;
+}
+
+.display::-webkit-scrollbar-thumb {
+    background: #2b2b2b;
+}
+
+.display::-webkit-scrollbar {
+    width: 5px; 
 }
 
 h1 {
