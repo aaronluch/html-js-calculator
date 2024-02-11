@@ -1,1 +1,148 @@
-/* adding soon
+@font-face{
+    font-family: 'SF-Regular';
+    src: url('../font/SF-Pro-Display-Regular.otf') format('opentype');
+}
+
+@font-face{
+    font-family: 'SF-Bold';
+    src: url('../font/SF-Pro-Display-Bold.otf') format('opentype');
+}
+
+@font-face{
+    font-family: 'SF-Light';
+    src: url('../font/SF-Pro-Display-Light.otf') format('opentype');
+}
+
+body {
+    display: flex;
+    background-color: rgb(21, 21, 21);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    overflow: hidden;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    background: linear-gradient(90deg,#f14f8bce,#df9745);
+    z-index: -1; 
+    animation: slide 1s linear infinite;
+}
+
+@keyframes slide {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.calculator {
+    font-family: 'SF-Regular', Arial, sans-serif;
+    color: rgb(255, 255, 255);
+    background-color: black;
+    width: 30vw;
+    padding: 20px;
+    box-shadow: 0 0 10px rgb(89, 0, 255), 0 20px 40px rgb(0, 0, 0);
+    margin-top: 20px;
+    border-radius: 15px;
+}
+
+.display {
+    box-sizing: border-box;
+    font-family: 'SF-Light';
+    width: 100%;
+    font-size: 55px;
+    padding: 0 15px;
+    text-align: right;
+    white-space: nowrap;
+    color: rgb(255, 255, 255);
+    margin-top: 80px;
+    overflow: hidden;
+}
+
+h1 {
+    color: rgb(236, 250, 252);
+    font-family: 'SF-Light', Arial, sans-serif;
+    text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.22);
+}
+
+.buttons {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 15px;
+}
+
+.class {
+    padding: 100px;
+}
+
+button {
+    font-size: 25px;
+    border-radius: 50%; 
+    height: 50px;
+    width: 50px;
+    text-align: center; 
+    line-height: 50px;
+    padding: 0;
+    border: none;
+    background-color: #333333;
+    color: white;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+button:hover {
+    background-color: rgb(129, 129, 129);
+}
+
+button:active {
+    transition-duration: 0.23s;
+    transform: scale(.9);
+}
+
+.math {
+    background-color: #ff9f0a;
+    font-size: 200%;
+}
+
+.math:hover {
+    background-color: rgb(255, 106, 0);
+}
+
+.math:active {
+    transition-duration: 0.23s;
+    transform: scale(.9);
+}
+
+.special {
+    color: black;
+    background-color: #a5a5a5;
+    font-family: 'SF-Bold';
+    font-size:125%;
+}
+
+.special:hover {
+    background-color: rgb(241, 241, 241);
+}
+
+.special:active {
+    transition-duration: 0.23s;
+    transform: scale(.9);
+}
+
+.zero {
+    grid-column: span 2;
+    width: 112px;
+    border-radius: 40px;
+    text-align: left;
+    text-indent: 18px;
+}

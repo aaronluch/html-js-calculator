@@ -10,28 +10,32 @@
 </head>
 
 <body>
-    <h1>Little Calculator</h1>
+    <h1>IOS Calculator</h1>
     <div class="calculator">
         <div class="display" id="display">0</div>
         <div class="buttons">
-            <button onclick="clearDisplay()">C</button>
-            <button onclick="appendDisplay('/')">/</button>
-            <button onclick="appendDisplay('+')">+</button>
-            <button onclick="appendDisplay('-')">-</button>
-            <button onclick="appendDisplay('.')">.</button>
-            <button onclick="appendDisplay('1')">1</button>
-            <button onclick="appendDisplay('2')">2</button>
-            <button onclick="appendDisplay('3')">3</button>
-            <button onclick="appendDisplay('4')">4</button>
-            <button onclick="appendDisplay('5')">5</button>
-            <button onclick="appendDisplay('6')">6</button>
+            <button class="button special" onclick="clearDisplay()">AC</button>
+            <button class="button special" onclick="appendDisplay('-')">+/-</button>
+            <button class="button special" onclick="appendDisplay('%')">%</button>
+            <button class="button math" onclick="appendDisplay('/')">÷</button>
             <button onclick="appendDisplay('7')">7</button>
             <button onclick="appendDisplay('8')">8</button>
             <button onclick="appendDisplay('9')">9</button>
-            <button onclick="appendDisplay('0')">0</button>
-            <button onclick="calculateResult()">=</button>
+            <button class="button math" onclick="appendDisplay('*')">×</button>
+            <button onclick="appendDisplay('4')">4</button>
+            <button onclick="appendDisplay('5')">5</button>
+            <button onclick="appendDisplay('6')">6</button>
+            <button class="button math" onclick="appendDisplay('-')">–</button>
+            <button onclick="appendDisplay('1')">1</button>
+            <button onclick="appendDisplay('2')">2</button>
+            <button onclick="appendDisplay('3')">3</button>
+            <button class="button math" onclick="appendDisplay('+')">+</button>
+            <button class="button zero" onclick="appendDisplay('0')">0</button>
+            <button onclick="appendDisplay('.')">.</button>
+            <button class="button math" onclick="calculateResult()">=</button>
         </div>
     </div>
     <script src="js/calculator.js"></script>
+    <script src="js/overflow.js"></script>
 </body>
 </html>
