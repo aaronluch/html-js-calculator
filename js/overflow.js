@@ -1,9 +1,13 @@
-/* overflow for text*/
+/*
+Adjusts for overflow
+*/
 function adjustFontSizeToFit() {
     const display = document.getElementById('display');
     let currentFontSize = parseInt(window.getComputedStyle(display).fontSize);
   
-// check if the display's content is overflowing its bounds
+/*
+Check if display's content is overflowing bounds
+*/
 while (display.scrollWidth > display.offsetWidth && currentFontSize > 10) {
     // reduce font size
     currentFontSize--;
@@ -11,17 +15,21 @@ while (display.scrollWidth > display.offsetWidth && currentFontSize > 10) {
     }
 }
   
+/*
+Adjusts the font's size due to overflow
+*/
+
 // initial adjustment
 adjustFontSizeToFit();
-  
-// adjust font size whenever the content of the display changes
 function overflowDisplay(newContent) {
     const display = document.getElementById('display');
     display.textContent = newContent;
     adjustFontSizeToFit();
 }
 
-// reset text size to initial
+/*
+Resets the display's font-size to default
+*/
 function resetSize() {
     const display = document.getElementById('display');
     display.style.fontSize = "55px";
