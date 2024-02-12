@@ -11,7 +11,7 @@ A simple web application designed to perform arithmetic operations. It supports 
 - **Basic Arithmetic Operations**: Perform addition (`+`), subtraction (`-`), multiplication (`*`), and division (`/`).
 - **Percentage Calculations**: Easily calculate percentages by appending `%` to numbers.
 - **Keyboard Support**: Fully supports keyboard input for efficient data entry.
-- **Responsive Design**: The calculator's layout adjusts to fit different screen sizes and resolutions, ensuring a consistent user experience across devices.
+- **Responsive Design**: The calculator's layout adjusts to fit different screen sizes and resolutions, as well as user-responsive visual buttons.
 
 ## Getting Started
 
