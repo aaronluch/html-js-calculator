@@ -4,7 +4,7 @@
 
 ## Overview
 
-A simple yet web application designed to perform arithmetic operations. It supports basic calculations like addition, subtraction, multiplication, and division, as well as percentage calculations and dynamic input adjustment.
+A simple web application designed to perform arithmetic operations. It supports basic calculations like addition, subtraction, multiplication, and division, as well as percentage calculations and dynamic input adjustment.
 
 ## Features
 
