@@ -4,10 +4,7 @@ Adjusts for overflow
 function adjustFontSizeToFit() {
     const display = document.getElementById('display');
     let currentFontSize = parseInt(window.getComputedStyle(display).fontSize);
-  
-/*
-Check if display's content is overflowing bounds
-*/
+
 while (display.scrollWidth > display.offsetWidth && currentFontSize > 10) {
     // reduce font size
     currentFontSize--;

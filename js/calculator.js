@@ -48,6 +48,19 @@ function calculateResult() {
 }
 
 /*
+Function for allowing users to backspace previous character
+*/
+function backspace() {
+    if (displayValue.length > 1) {
+        displayValue = displayValue.slice(0, -1);
+    } else {
+        displayValue = "0";
+    }
+    updateDisplay();
+    adjustFontSizeToFit();
+}
+
+/*
 Listener for key-press input
 */
 document.addEventListener('keydown', keyPress);
@@ -79,6 +92,9 @@ function keyPress(event) {
             break;
         case 'Escape':
             clearDisplay();
+            break;
+        case 'Backspace':
+            backspace();
             break;
         default:
             break;
